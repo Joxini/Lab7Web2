@@ -1,0 +1,48 @@
+<h1 class="titulo">{{titulo}}</h1>
+ <form [formGroup] = "usuarioForm.baseForm">
+
+    <mat-form-field>
+        <mat-label>Cedula</mat-label>
+        <!-- [readonly]="!isCreate", me sirve que si es metodo crear, me deja edictar el id, pero si es modificar no me deja modificarlo -->
+        <input matInput formControlName= "cedula" [readonly]="!isCreate">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName= "nombre">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Apellido 1</mat-label>
+        <input matInput formControlName= "apellido1">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Apellido 2</mat-label>
+        <input matInput formControlName= "apellido2">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Fecha Ingreso</mat-label>
+        <input type="date" matInput formControlName= "fecha_ingreso">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Correo</mat-label>
+        <input matInput formControlName= "correo">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Rol</mat-label>
+        <input matInput formControlName= "rol">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Contraseña</mat-label>
+        <input matInput formControlName= "contrasena">
+    </mat-form-field>
+ </form>
+
+ <div>
+    <button mat-raised-button color="primary" (click) = "guardar()">Guardar</button>
+ </div>
